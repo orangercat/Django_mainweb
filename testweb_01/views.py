@@ -8,6 +8,11 @@ def base(req):
     # return HttpResponse("aa")
     return render_to_response('base.html', )
 
+def test(req):
+
+    # return HttpResponse("aa")
+    return render_to_response('test.html', )
+
 
 def about(req):
 
