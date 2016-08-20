@@ -21,7 +21,7 @@ body a{
 	-moz-transition:0.5s all;
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
-	
+
 }
 body a:hover{
 text-decoration:none;
@@ -57,7 +57,7 @@ h1.b1, h2.b2, h3.b3 {
 .header-top{
 	padding:1.3em 0;
 }
-.logo{	
+.logo{
 	float:left;
 }
 .details{
@@ -459,7 +459,7 @@ a.read:hover{
 }
 .ftr-grid1 h3{
 	color: #fff;
-  font-size:1.7em; 
+  font-size:1.7em;
   font-family: 'Marvel-Regular';
   font-weight: 700;
   margin-bottom:1.5em;
@@ -483,7 +483,7 @@ a.read:hover{
 }
 .news-ltr h3{
 color: #fff;
-  font-size:1.7em; 
+  font-size:1.7em;
   font-family: 'Marvel-Regular';
   font-weight: 700;
   margin-bottom:0.7em;
@@ -561,7 +561,7 @@ color: #fff;
 }
 .social h3{
   color: #fff;
-  font-size:1.7em; 
+  font-size:1.7em;
   font-family: 'Marvel-Regular';
   font-weight: 700;
   margin-bottom:0.7em;
@@ -847,7 +847,7 @@ text-align:center;
 }
 .banner-left {
   background: url(../images/bnr2.jpg) no-repeat -72px 0px;
-  min-height: 501px;
+  min-height: 500px;
   background-size:cover;
 }
 .banner-left h3 {
@@ -865,12 +865,12 @@ text-align:center;
 .grid3 {
   background: url(../images/g4.jpg) no-repeat 0px 0px;
   background-size: cover;
-  min-height: 230px;
+  min-height: 250px;
 }
 .grid4 {
   background: url(../images/g3.jpg) no-repeat 0px 0px;
   background-size: cover;
-  min-height: 230px;
+  min-height: 250px;
 }
 }
 @media (max-width: 1024px){
@@ -889,7 +889,7 @@ text-align:center;
 }
 .banner-left {
   background: url(../images/bnr2.jpg) no-repeat -72px 0px;
-  min-height: 379px;
+  min-height: 369px;
   background-size: cover;
 }
 .banner_rght_info {
@@ -1194,7 +1194,7 @@ ul.nav1 {
 	 padding: 1.5em 0;
 	 display: block;
 	 float: none;
-}	
+}
 .top-menu ul li a i {
 	margin-top: .5em;
 }

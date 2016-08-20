@@ -1,156 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load staticfiles %}
+    {% load staticfiles %}
 
-<head>
-    <title>Home</title>
-    <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
-    <!-- jQuery (necessary JavaScript plugins) -->
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <!--Custom Theme files -->
-    <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
-    <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="keywords" content="Wildlife Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+    <head>
+        <title>Home</title>
+        <link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
+        <!-- jQuery (necessary JavaScript plugins) -->
+        <script src="{% static 'js/bootstrap.js' %}"></script>
+        <!--Custom Theme files -->
+        <link rel="stylesheet" href="{% static 'css/lightbox.css' %}">
+        <link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css'/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="keywords" content="Wildlife Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
     Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"/>
-    <script type="application/x-javascript">
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
+        <script type="application/x-javascript">
+         addEventListener("load", function () {
+     setTimeout(hideURLbar, 0);
+     }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+         function hideURLbar() {
+     window.scrollTo(0, 1);
+     }
     </script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.js' %}"></script>
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.js' %}"></script>
 
-</head>
+    </head>
 
-<body>
-<!-- banner -->
-<div class="banner">
-    <div class="header-top">
-        <div class="container">
-            <div class="logo">
-                <h1><a href="{% url 'index' %}">WILD LIFE</a></h1>
-            </div>
-            <div class="details">
-                <div class="locate">
-                    <div class="detail-grid">
-                        <div class="lctr">
-                            <img src="{% static 'images/lct.png' %}" alt=""/>
+    <body>
+        <!-- banner -->
+        <div class="banner">
+            <div class="header-top">
+                <div class="container">
+                    <div class="logo">
+                        <h1><a href="{% url 'index' %}">WILD LIFE</a></h1>
+                    </div>
+                    <div class="details">
+                        <div class="locate">
+                            <div class="detail-grid">
+                                <div class="lctr">
+                                    <img src="{% static 'images/lct.png' %}" alt=""/>
+                                </div>
+                                <p>Lorem ipsum dolor,
+                                    <span>Glasglow Dr 40 Fe 72.</span></p>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="detail-grid">
+                                <div class="lctr">
+                                    <img src="{% static 'images/phn.png' %}" alt=""/>
+                                </div>
+                                <p>Tel:1115550001</p>
+                                <div class="clearfix"></div>
+                            </div>
                         </div>
-                        <p>Lorem ipsum dolor,
-                            <span>Glasglow Dr 40 Fe 72.</span></p>
-                        <div class="clearfix"></div>
                     </div>
-                    <div class="detail-grid">
-                        <div class="lctr">
-                            <img src="{% static 'images/phn.png' %}" alt=""/>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="header">
+                <div class="container">
+                    <div class="top-menu">
+                        <span class="menu"><img src="{% static 'images/menu.png' %}" alt=""></span>
+                        <ul class="nav1">
+                            <li class="active"><a href="{% url 'index' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'projects' %}">Projects</a></li>
+                            <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                            <li><a href="{% url 'typo' %}">Typo</a></li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                    </div>
+                    <!-- script-for-menu -->
+                    <script>
+                     $("span.menu").click(function () {
+                         $("ul.nav1").slideToggle(300, function () {
+                             // Animation complete.
+                         });
+                     });
+                    </script>
+                    <!-- /script-for-menu -->
+
+                    <div class="search">
+                        <form>
+                            <input type="text" value="" placeholder="Search...">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div id="banner-sec" class="banner-sec">
+                {% block banner-sec %}
+                {% endblock %}
+            </div>
+            <div id="content" class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+            <div class="service">
+                <div class="container">
+                    <h3>Services</h3>
+                    <div class="works">
+                        <div class="prjt-grid">
+                            <div class="box maxheight">
+                                <a class="example-image-link" href="images/s1.jpg" data-lightbox="example-1" data-title="Guidance."><img class="example-image" src="images/s1.jpg"></a>
+                                <div class="project-info">
+                                    <a href="single.html">Guidance</a>
+                                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla estero libero orciwe. </p>
+                                </div>
+                            </div>
                         </div>
-                        <p>Tel:1115550001</p>
+                        <div class="prjt-grid">
+                            <div class="box maxheight">
+                                <a class="example-image-link" href="images/s2.jpg" data-lightbox="example-2" data-title="Mobile Tents."><img class="example-image" src="images/s2.jpg"></a>
+                                <div class="project-info">
+                                    <a href="single.html">Mobile Tents</a>
+                                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla estero libero orciwe. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prjt-grid span66">
+                            <div class="box maxheight">
+                                <a class="example-image-link" href="images/s3.jpg" data-lightbox="example-3" data-title="Animal Care."><img class="example-image" src="images/s3.jpg"></a>
+                                <div class="project-info">
+                                    <a href="single.html">Animal Care</a>
+                                    <p>Kuspendisse laoreet augue iderti wer interdum merti oremolo lectusto odio, sedorolu fringilla estero libero orciwe.</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
             </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <div class="header">
-        <div class="container">
-            <div class="top-menu">
-                <span class="menu"><img src="{% static 'images/menu.png' %}" alt=""></span>
-                <ul class="nav1">
-                    <li class="active"><a href="{% url 'index' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'projects' %}">Projects</a></li>
-                    <li><a href="{% url 'gallery' %}">Gallery</a></li>
-                    <li><a href="{% url 'typo' %}">Typo</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                </ul>
-            </div>
-            <!-- script-for-menu -->
-            <script>
-                $("span.menu").click(function () {
-                    $("ul.nav1").slideToggle(300, function () {
-                        // Animation complete.
-                    });
-                });
-            </script>
-            <!-- /script-for-menu -->
-
-            <div class="search">
-                <form>
-                    <input type="text" value="" placeholder="Search...">
-                    <input type="submit" value="">
-                </form>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <div id="banner-sec" class="banner-sec">
-        {% block banner-sec %}
-        {% endblock %}
-    </div>
-    <div id="content" class="content">
-        {% block content %}
-        {% endblock %}
-    </div>
-    <div class="footer">
-        <div class="container">
-            <div class="footer-sec">
-                <div class="col-md-4 ftr-grid1">
-                    <h3>Latest Tweets</h3>
-                    <div class="twts">
-                        <h5>Nunc porta justo eu varius mattis.</h5>
-                        <a href="mailto:example@gmail.com">http://www.example.com</a>
-                    </div>
-                    <div class="twts">
-                        <h5>Nunc porta justo eu varius mattis.</h5>
-                        <a href="mailto:example@gmail.com">http://www.example.com</a>
-                    </div>
-                </div>
-                <div class="col-md-4 news-ltr">
-                    <h3>NewsLetter</h3>
-                    <p>Praesent ex lectus, luctus ut enim sed, scelerisque laoreet massa. Fusce rhoncus massa dignissim
-                        suscipit varius. Donec vel congue libero. </p>
-                    <form>
-                        <input type="text" class="text" value="Enter Email" onFocus="this.value = '';"
-                               onBlur="if (this.value == '') {this.value = 'Enter Email';}">
-                        <input type="submit" value="Go">
+            <div class="content-bottom">
+                <div class="container">
+                    <div class="wlid-sec">
+                        <div class="col-md-6 news">
+                            <div class="news-head">
+                                <h3>Latest News</h3>
+                                <span></span>
+                            </div>
+                            <div class="news_sec">
+                                <img src="images/new.jpg" class="img-responsive" alt="" />
+                                <h3><a href="#">Mauris hendrerit ex id leo elementum congue.</a></h3>
+                                <p>Praesent accumsan augue dolor, vel eleifend lorem pellentesque egestas. Ut sit amet iaculis erat. Cras venenatis sodales nibh non finibus. Mauris dapibus ex ante. Aenean quis vestibulum mi. Mauris scelerisque urna id lectus suscipit,
+                                    sed mattis lorem congue. Fusce dapibus tempor augue. Ut ac pharetra nisl. </p>
+                                <a class="read" href="about.html">Read More...</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 testimonal">
+                            <div class="testi-head">
+                                <h3>Testimonals</h3>
+                                <span></span>
+                            </div>
+                            <div class="testi-grids">
+                                <div class="testi-grid">
+                                    <div class="people">
+                                        <img src="images/t1.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <div class="testi-info">
+                                        <h4>John Deo</h4>
+                                        <a href="projects.html">Program Director</a>
+                                        <p>Nullam viverra porttitor est at vestibulum. Quisque sodales justo eu erat malesuada rutrum. Ut orci velit, dignissim ut dui convallis, sagittis cursus sem.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="testi-grid testi2">
+                                    <div class="people">
+                                        <img src="images/t2.jpg" class="img-responsive" alt="" />
+                                    </div>
+                                    <div class="testi-info">
+                                        <h4>John Deo</h4>
+                                        <a href="projects.html">Program Director</a>
+                                        <p>Nullam viverra porttitor est at vestibulum. Quisque sodales justo eu erat malesuada rutrum. Ut orci velit, dignissim ut dui convallis, sagittis cursus sem.</p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="clearfix"></div>
-                    </form>
+                    </div>
                 </div>
-                <div class="col-md-4 social">
-                    <h3>Social Media</h3>
-                    <a href="#"><i class="facebook"></i></a>
-                    <a href="#"><i class="twitter"></i></a>
-                    <a href="#"><i class="dribble"></i></a>
-                    <a href="#"><i class="google"></i></a>
-                    <a href="#"><i class="youtube"></i></a>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="footer-sec">
+                        <div class="col-md-4 ftr-grid1">
+                            <h3>Latest Tweets</h3>
+                            <div class="twts">
+                                <h5>Nunc porta justo eu varius mattis.</h5>
+                                <a href="mailto:example@gmail.com">http://www.example.com</a>
+                            </div>
+                            <div class="twts">
+                                <h5>Nunc porta justo eu varius mattis.</h5>
+                                <a href="mailto:example@gmail.com">http://www.example.com</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 news-ltr">
+                            <h3>NewsLetter</h3>
+                            <p>Praesent ex lectus, luctus ut enim sed, scelerisque laoreet massa. Fusce rhoncus massa dignissim
+                                suscipit varius. Donec vel congue libero. </p>
+                            <form>
+                                <input type="text" class="text" value="Enter Email" onFocus="this.value = '';"
+                                       onBlur="if (this.value == '') {this.value = 'Enter Email';}">
+                                <input type="submit" value="Go">
+                                <div class="clearfix"></div>
+                            </form>
+                        </div>
+                        <div class="col-md-4 social">
+                            <h3>Social Media</h3>
+                            <a href="#"><i class="facebook"></i></a>
+                            <a href="#"><i class="twitter"></i></a>
+                            <a href="#"><i class="dribble"></i></a>
+                            <a href="#"><i class="google"></i></a>
+                            <a href="#"><i class="youtube"></i></a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
                 </div>
-                <div class="clearfix"></div>
             </div>
-        </div>
-    </div>
-    <!---->
-    <div class="copywrite">
-        <div class="container">
-            <div class="ftr-logo">
-                <h3><a href="index.html">WILD LIFE</a></h3>
+            <div class="copywrite">
+                <div class="container">
+                    <div class="ftr-logo">
+                        <h3><a href="index.html">WILD LIFE</a></h3>
+                    </div>
+                    <div class="ftr-right">
+                        <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a
+                                                                                                     href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
+                                                                                                                                                                                                      href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-            <div class="ftr-right">
-                <p>Copyright &copy; 2015.Company name All rights reserved.More Templates <a
-                        href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
-                        href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-    <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+            <script src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
 
-</body>
+    </body>
 
 </html>
